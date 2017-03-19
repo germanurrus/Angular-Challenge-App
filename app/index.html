@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" ng-app="challengeApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Challenge App: Lista de Elementos</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="app.css" />
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-drag-and-drop-lists/angular-drag-and-drop-lists.js"></script>
+    <script src="bower_components/angular-indexedDB/angular-indexed-db.js"></script>
+    <script src="app.module.js"></script>
+    <script src="app.config.js"></script>
+    <script src="db.config.js"></script>
+    <script src="core/core.module.js"></script>
+    <script src="core/element/element.module.js"></script>
+    <script src="core/element/element.service.js"></script>
+    <script src="menu/menu-main.module.js"></script>
+    <script src="menu/menu-main.component.js"></script>
+    <script src="element-list/element-list.module.js"></script>
+    <script src="element-list/element-list.component.js"></script>
+    <script src="element-unit/element-unit.module.js"></script>
+    <script src="element-unit/element-unit.component.js"></script>
+
+  </head>
+  <body>
+    <menu-main></menu-main>
+    <div ng-view></div>
+
+  </body>
+</html>

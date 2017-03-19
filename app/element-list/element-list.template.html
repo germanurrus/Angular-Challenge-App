@@ -1,0 +1,36 @@
+
+
+<div class="container-fluid separacionForm">
+  <div class="row">
+    <div class="col-md-6 col-lg-offset-3">
+      <form name="form" class="css-form">
+        <div class="form-group margenForm">
+          <h4>Crear Elemento - Ingrese Descripción</h4>
+          <textarea class="form-control" name="description" ng-model="$ctrl.description" maxlength="25" required="" placeholder="Ingrese Descripción"> </textarea>
+        </div>
+        <p>{{25 - $ctrl.description.length}} Caracteres restantes</p>
+        <div ng-show="form.uName.$error.maxlength">Tell us your name.</div>
+        <input class="btn btn-primary pull-right" type="button" ng-click="$ctrl.resetLista()" value="Reset Lista" />
+        <input class="btn btn-primary pull-right" type="submit" ng-click="$ctrl.saveElement($ctrl.description)" value="Crear Elemento" />
+        <!--<input class="btn btn-primary pull-right" type="submit" ng-click="$ctrl.printList()" value="PrintList" />-->
+      </form>
+    </div>
+  </div>
+  <div class="row separacionLista">
+    <div class="col-md-6 col-lg-offset-3">
+        <ul class="elements list-group"  dnd-list="elements">
+
+          <li class="list-group-item" ng-repeat="elem in elements"
+
+              dnd-draggable="elem"
+              dnd-moved="elements.splice($index, 1)"
+              dnd-effect-allowed="move"
+              dnd-selected="selected = elem"
+              ng-class="{'selected': selected === elem}">
+
+             <element-unit element="elem" idorder={{$index+1}} ></element-unit>
+          </li>
+        </ul>
+    </div>
+  </div>
+</div>

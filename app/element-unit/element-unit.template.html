@@ -1,0 +1,18 @@
+
+<div class="container-fluid" >
+  <div class="form-group row">
+    <label class="col-xs-2 col-form-label">Descripción</label>
+    <div class="col-xs-10">
+      <input type="text" ng-model="$ctrl.element.description" maxlength="25" ng-change="$ctrl.changeDescription($ctrl.element)"/>
+      <input type="hidden" ng-model="$ctrl.element.order"  ng-change="$ctrl.changeOrder($ctrl.element)" ng-value="$ctrl.element.order = $ctrl.idorder" />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-11">
+      <div class="pull-right">
+        <input class="btn" type="button" ng-click="$ctrl.deleteElement($ctrl.element)" value="Eliminar" />
+      </div>
+    </div>
+  </div>
+</div>
